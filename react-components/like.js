@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import '../index.css';
+import './style.css';
 
 export class LikeComponent extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export class LikeComponent extends Component {
     return (
       <div>
        <button 
-        className="LikeButton" 
+        className="likeButton" 
         style={{
           color: this.state.isLiked ? 'blue' : 'black'
         }}

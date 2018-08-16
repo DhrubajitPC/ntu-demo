@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
 module.exports = {
   entry: './index.js',
   // externals: ['axios', 'vue'],
@@ -22,18 +24,24 @@ module.exports = {
       {
         test:/\.css$/,
         use:['style-loader','css-loader']
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
   },
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js'
-    }
+      vue$: 'vue/dist/vue.esm.js'
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./index.html",
       filename: "./index.html"
-    })
+    }),
+    new VueLoaderPlugin(),
   ]
 };

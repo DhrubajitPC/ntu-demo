@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { LikeComponent } from './like';
 import { LikeService } from '../services/like-service';
+import './style.css';
 
 export class ReactContainer extends Component {
   constructor(props) {
@@ -42,8 +43,8 @@ export class ReactContainer extends Component {
 
   render() {
     return (
-      <div>
-        <p>This is a react rendered container</p>
+      <div className="container">
+        <p>This is a react container</p>
         <LikeComponent 
           nbLikes={this.state.nbLikes}
           addLike={this.addLike}
