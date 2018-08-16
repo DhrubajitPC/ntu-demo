@@ -44,7 +44,7 @@ export class ReactContainer extends Component {
   render() {
     return (
       <div className="container">
-        <p>This is a react container</p>
+        <h3>This is a react container</h3>
         <LikeComponent 
           nbLikes={this.state.nbLikes}
           addLike={this.addLike}
