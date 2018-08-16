@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class LikeService {
   constructor() {
-    this.baseUrl = 'http://localhost:3000';
+    this.baseUrl = '/api';
   }
 
   getReactLikes() {

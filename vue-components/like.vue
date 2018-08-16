@@ -4,7 +4,7 @@
 			@click="toggleLike()" 
 			class="likeButton" 
 			:class="{liked: isLiked}">
-		  ❤ {{nbLikes}}
+		  <i class="fas fa-heart"></i> {{nbLikes}}
 		</button>
 	</div>
 </template>

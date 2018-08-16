@@ -36,7 +36,7 @@ export class LikeComponent extends Component {
           color: this.state.isLiked ? 'blue' : 'black'
         }}
         onClick={this.onLikeHandler}>
-          ❤ {this.props.nbLikes}
+          <i class="fas fa-heart"></i> {this.props.nbLikes}
         </button>
       </div>
     )
